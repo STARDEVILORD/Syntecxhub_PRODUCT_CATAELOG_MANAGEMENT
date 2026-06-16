@@ -1,4 +1,4 @@
-# Product Catalog Management API
+# Product Catalog Management
 
 A full-stack RESTful API and frontend dashboard for managing a product catalog. Built with Node.js, Express, and MongoDB Atlas, featuring JWT authentication, strict Joi data validation, and an interactive UI for seamless CRUD operations.
 
