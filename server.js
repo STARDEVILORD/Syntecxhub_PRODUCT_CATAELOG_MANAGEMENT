@@ -1,12 +1,12 @@
-require("dotenv").config();
-const express = require("express");
-const helmet = require("helmet");
-const cors = require("cors");
-const morgan = require("morgan");
-const connectDB = require("./src/config/db");
-const productRoutes = require("./src/routes/productRoutes");
-const authRoutes = require("./src/routes/authRoutes");
-const errorHandler = require("./src/middleware/errorHandler");
+require('dotenv').config();
+const express = require('express');
+const helmet = require('helmet');
+const cors = require('cors');
+const morgan = require('morgan');
+const connectDB = require('./src/config/db');
+const productRoutes = require('./src/routes/productRoutes');
+const authRoutes = require('./src/routes/authRoutes');
+const errorHandler = require('./src/middleware/errorHandler');
 
 // Initialize Express app
 const app = express();
@@ -14,7 +14,6 @@ const app = express();
 // Connect to Database
 connectDB();
 
-// Security & Utility Middleware
 // Security Middleware (Relaxed CSP for inline scripts)
 app.use(helmet({
     contentSecurityPolicy: {
@@ -25,20 +24,23 @@ app.use(helmet({
         },
     },
 }));
+
+// Utility Middleware
 app.use(cors());
 app.use(express.json());
-app.use(morgan("dev"));
+app.use(morgan('dev'));
 
-// NEW: Serve frontend static files
-app.use(express.static("public"));
+// Serve frontend static files
+app.use(express.static('public'));
 
-// Routes
-app.use("/api/auth", authRoutes);
+// API Routes
+app.use('/api/auth', authRoutes);
+app.use('/api/products', productRoutes); // <-- This line was likely missing!
 
 // Global Error Handler
 app.use(errorHandler);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+    console.log(`Server running on port ${PORT}`);
 });
