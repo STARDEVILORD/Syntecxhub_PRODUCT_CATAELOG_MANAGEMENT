@@ -9,7 +9,7 @@ const {
 const {
   validateProduct,
   validateProductUpdate,
-} = require("../middleware/validator"); // <-- Added validateProductUpdate
+} = require("../middleware/validator");
 const { protect } = require("../middleware/auth");
 
 const router = express.Router();
@@ -22,7 +22,7 @@ router
 router
   .route("/:id")
   .get(getProduct)
-  .put(protect, validateProductUpdate, updateProduct) // <-- Swapped to validateProductUpdate
+  .put(protect, validateProductUpdate, updateProduct) 
   .delete(protect, deleteProduct);
 
 module.exports = router;
