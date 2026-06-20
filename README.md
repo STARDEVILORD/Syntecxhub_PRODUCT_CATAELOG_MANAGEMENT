@@ -4,7 +4,7 @@ A full-stack RESTful API and frontend dashboard for managing a product catalog. 
 
 ## 🌐 Live Demo
 
-**Try it here:** https://syntecxhub-product-cataelog-management.onrender.com
+**Try it here:** https://syntecxhub-product-cataelog-management.onrender.com/
 
 Generate a test token and interact with the live MongoDB cloud database to instantly create, view, update, and delete products directly from your browser.
 
