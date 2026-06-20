@@ -41,7 +41,7 @@ This project demonstrates an end-to-end web application pipeline built in JavaSc
 ## 📂 Project Structure
 
 ```text
-product-catalog-api/
+PRODUCT CATAELOG MANAGEMENT/
 ├── public/                  # Frontend static files
 │   └── index.html           # Interactive API testing dashboard
 ├── src/                     # Backend source code
@@ -61,7 +61,6 @@ product-catalog-api/
 │       ├── authRoutes.js
 │       └── productRoutes.js
 ├── .env                     # Environment variables (ignored by Git)
-├── .gitignore
 ├── server.js                # Application entry point
 ├── package.json
 └── README.md
@@ -71,8 +70,8 @@ product-catalog-api/
 ## ⚙️ Setup
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/product-catalog-api.git
-cd product-catalog-api
+https://github.com/STARDEVILORD/Syntecxhub_PRODUCT_CATAELOG_MANAGEMENT.git
+cd PRODUCT CATAELOG MANAGEMENT
 
 # Install dependencies
 npm install
